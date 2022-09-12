@@ -14,7 +14,8 @@
 		AEE2CCA22819534F0087489B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE2CCA02819534F0087489B /* Main.storyboard */; };
 		AEE2CCA4281953520087489B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE2CCA3281953520087489B /* Assets.xcassets */; };
 		AEE2CCA7281953520087489B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE2CCA5281953520087489B /* LaunchScreen.storyboard */; };
-		AEE2CCAF281953970087489B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE2CCAE281953970087489B /* ContentView.swift */; };
+		CFB00C5F28CF935400059F6B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB00C5E28CF935400059F6B /* ViewModel.swift */; };
+		CFB00C6128CF946300059F6B /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB00C6028CF946300059F6B /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +28,9 @@
 		AEE2CCA3281953520087489B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEE2CCA6281953520087489B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEE2CCA8281953520087489B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEE2CCAE281953970087489B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C481D5440C90E7FBC6B8F342 /* Pods_ListTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB00C5E28CF935400059F6B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CFB00C6028CF946300059F6B /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		E375B20160CB8EB986397B7A /* Pods-ListTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListTap.debug.xcconfig"; path = "Target Support Files/Pods-ListTap/Pods-ListTap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +60,6 @@
 				E375B20160CB8EB986397B7A /* Pods-ListTap.debug.xcconfig */,
 				25123A38FB8021C59E2B3E3E /* Pods-ListTap.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,7 +87,8 @@
 				AEE2CC9A2819534F0087489B /* AppDelegate.swift */,
 				AEE2CC9C2819534F0087489B /* SceneDelegate.swift */,
 				AEE2CC9E2819534F0087489B /* ViewController.swift */,
-				AEE2CCAE281953970087489B /* ContentView.swift */,
+				CFB00C5E28CF935400059F6B /* ViewModel.swift */,
+				CFB00C6028CF946300059F6B /* CustomCollectionViewCell.swift */,
 				AEE2CCA02819534F0087489B /* Main.storyboard */,
 				AEE2CCA3281953520087489B /* Assets.xcassets */,
 				AEE2CCA5281953520087489B /* LaunchScreen.storyboard */,
@@ -211,8 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE2CC9F2819534F0087489B /* ViewController.swift in Sources */,
+				CFB00C6128CF946300059F6B /* CustomCollectionViewCell.swift in Sources */,
 				AEE2CC9B2819534F0087489B /* AppDelegate.swift in Sources */,
-				AEE2CCAF281953970087489B /* ContentView.swift in Sources */,
+				CFB00C5F28CF935400059F6B /* ViewModel.swift in Sources */,
 				AEE2CC9D2819534F0087489B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +366,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4948RFH85;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ListTap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -370,6 +374,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4948RFH85;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ListTap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -398,6 +404,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
