@@ -16,6 +16,7 @@
 		AEE2CCA7281953520087489B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE2CCA5281953520087489B /* LaunchScreen.storyboard */; };
 		CFB00C5F28CF935400059F6B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB00C5E28CF935400059F6B /* ViewModel.swift */; };
 		CFB00C6128CF946300059F6B /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB00C6028CF946300059F6B /* CustomCollectionViewCell.swift */; };
+		CFB00C6328CF9F6200059F6B /* CellInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB00C6228CF9F6200059F6B /* CellInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		C481D5440C90E7FBC6B8F342 /* Pods_ListTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFB00C5E28CF935400059F6B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CFB00C6028CF946300059F6B /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		CFB00C6228CF9F6200059F6B /* CellInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellInput.swift; sourceTree = "<group>"; };
 		E375B20160CB8EB986397B7A /* Pods-ListTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListTap.debug.xcconfig"; path = "Target Support Files/Pods-ListTap/Pods-ListTap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				AEE2CC9E2819534F0087489B /* ViewController.swift */,
 				CFB00C5E28CF935400059F6B /* ViewModel.swift */,
 				CFB00C6028CF946300059F6B /* CustomCollectionViewCell.swift */,
+				CFB00C6228CF9F6200059F6B /* CellInput.swift */,
 				AEE2CCA02819534F0087489B /* Main.storyboard */,
 				AEE2CCA3281953520087489B /* Assets.xcassets */,
 				AEE2CCA5281953520087489B /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				AEE2CC9F2819534F0087489B /* ViewController.swift in Sources */,
 				CFB00C6128CF946300059F6B /* CustomCollectionViewCell.swift in Sources */,
+				CFB00C6328CF9F6200059F6B /* CellInput.swift in Sources */,
 				AEE2CC9B2819534F0087489B /* AppDelegate.swift in Sources */,
 				CFB00C5F28CF935400059F6B /* ViewModel.swift in Sources */,
 				AEE2CC9D2819534F0087489B /* SceneDelegate.swift in Sources */,

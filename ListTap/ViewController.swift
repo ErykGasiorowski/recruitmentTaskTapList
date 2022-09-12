@@ -1,8 +1,8 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
     private lazy var collectionViewFlowLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
         collectionView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: CustomCollectionViewCell.identifier)
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.dataSource = viewModel
+        collectionView.delegate = viewModel
         collectionView.frame = view.bounds
         return collectionView
     }()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         return label
     }()
     
-    private var button: UIButton = {
+    private lazy var button: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemGreen
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
@@ -43,17 +43,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         layout()
+        setupBehaviour()
     }
-
+    
+    private func setupBehaviour() {
+        viewModel.reloadCollectionView = { [weak self] in
+            self?.collectionView.reloadData()
+            self?.actionLabel.text = self?.viewModel.actionLabelText
+        }
+    }
+    
     @objc private func didTapButton() {
         if button.isSelected == false {
             button.isSelected = true
             button.backgroundColor = .red
+            viewModel.startButtonTapped()
         }
         else {
             button.isSelected = false
+            viewModel.stopButtonTapped()
             button.backgroundColor = .systemGreen
         }
     }
@@ -78,20 +87,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
-extension ViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 1
-}
-
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCollectionViewCell.identifier, for: indexPath) as? CustomCollectionViewCell
-    else {
-        return UICollectionViewCell()
-    }
-    
-    return cell
-}
-}
-

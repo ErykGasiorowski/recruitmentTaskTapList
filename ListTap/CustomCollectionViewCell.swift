@@ -8,29 +8,27 @@
 import UIKit
 import SnapKit
 
-class CustomCollectionViewCell: UICollectionViewCell {
+final class CustomCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "CustomCollectionViewCell"
     private var circleFillImageName = "circle.fill"
-
+    
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: circleFillImageName)
-        imageView.backgroundColor = .systemBlue
         return imageView
     }()
     
     private let separator: UIView = {
         let view = UIView()
         view.backgroundColor = .gray
-        view.isHidden = false
+        view.isHidden = true
         return view
     }()
     
     private let label: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .bold)
-        label.text = "1"
         return label
     }()
     
@@ -49,8 +47,11 @@ class CustomCollectionViewCell: UICollectionViewCell {
         label.text = nil
     }
     
-    func configure() {
-        // configure cell with viewModel 
+    func configure(model: CellInput) {
+        imageView.image = UIImage(systemName: circleFillImageName)
+        imageView.tintColor = model.displayColor
+        separator.isHidden = model.isSeparatorHidden
+        label.text = String(model.displayValue)
     }
     
     private func layout() {
