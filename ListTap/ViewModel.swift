@@ -18,7 +18,7 @@ final class ViewModel: NSObject {
     
     func startButtonTapped() {
         reloadCollectionView?()
-        timer = Timer.scheduledTimer(timeInterval: 1.1, target: self, selector: #selector(runTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimer), userInfo: nil, repeats: true)
     }
     
     func stopButtonTapped() {
