@@ -48,10 +48,11 @@ final class ViewModel: NSObject {
         case 9:
             actionLabelText = "addValueOfAnElementBefore(index: \(index))"
             if index != 0 {
-                array[index].number += array[index-1].number % array.count
+                array[index].number += array[index-1].number
             }
             else {
-                array[index].number += 1
+                let lastElement = array.last
+                array[index].number += lastElement?.number ?? 0
             }
         default: break
         }
@@ -103,12 +104,7 @@ extension ViewModel: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.row != 0 {
-            array[indexPath.row].number += array[indexPath.row-1].number % array.count
-            reloadCollectionView?()
-        } else {
-            array[indexPath.row].number += 1
-            reloadCollectionView?()
-        }
+        array[indexPath.row].number += 1
+        reloadCollectionView?()
     }
 }
